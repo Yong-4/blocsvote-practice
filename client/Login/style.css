@@ -1,0 +1,211 @@
+body {
+  font-family: Arial, sans-serif;
+  background: url('https://www.evsu.edu.ph/wp-content/uploads/2022/09/evsu-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.bg-blur {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(2px);
+  z-index: 0;
+}
+
+.login-card {
+  display: flex;
+  max-width: 700px;
+  width: 100%;
+  margin: auto;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+  min-height: 420px;
+}
+
+.evsu-logo {
+  width: 110px;
+  margin-bottom: 1.5rem;
+}
+
+.side-img {
+  width: 180px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.login-right {
+  flex: 1;
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.portal-title {
+  color: #d32f2f;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+  text-align: left;
+  letter-spacing: 2px;
+  font-family: 'Arial Black', Arial, sans-serif;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.input-label {
+  font-size: 1.15rem;
+  margin-bottom: 0.2rem;
+  color: #222;
+  font-weight: 700;
+}
+
+input[type="text"], input[type="password"] {
+  width: 95%;
+  padding: 0.7rem 0.9rem;
+  border: 1.5px solid #bdbdbd;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  background: #f7f7f7;
+  transition: border 0.2s;
+  margin-bottom: 0.2rem;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+  border: 1.5px solid #1976d2;
+  outline: none;
+  background: #fff;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 0.7rem 0;
+  background: #d32f2f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.login-btn:hover {
+  background: #b71c1c;
+}
+
+.login-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+  font-size: 0.97rem;
+  width: 100%;
+}
+
+.forgot-link {
+  color: #d32f2f;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+.register-link {
+  color: #222;
+}
+
+.register-link a {
+  color: #1976d2;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+.terms {
+  margin-top: 1.2rem;
+  font-size: 0.93rem;
+  color: #444;
+  text-align: left;
+}
+
+.terms a {
+  color: #d32f2f;
+  text-decoration: underline;
+}
+
+.continue-section {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #444;
+}
+
+.continue-buttons {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.continue-btn {
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.continue-btn.admin {
+  background: #1976d2;
+  color: #fff;
+}
+
+.continue-btn.admin:hover {
+  background: #125ea2;
+}
+
+.continue-btn.student {
+  background: #d32f2f;
+  color: #fff;
+}
+
+.continue-btn.student:hover {
+  background: #b71c1c;
+}
+
+@media (max-width: 900px) {
+  .login-card {
+    flex-direction: column;
+    max-width: 98vw;
+    margin: 20px auto;
+    min-height: unset;
+  }
+  .login-right {
+    padding: 1.5rem 1rem;
+  }
+}
