@@ -1,14 +1,13 @@
 body {
   font-family: Arial, sans-serif;
-  background: url('https://www.evsu.edu.ph/wp-content/uploads/2022/09/evsu-bg.jpg') no-repeat center center fixed;
   background-size: cover;
   margin: 0;
-  min-height: 100vh;
+  min-height: 90vh;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 90vh;
 }
 
 .bg-blur {
@@ -25,7 +24,7 @@ body {
   width: 100%;
   margin: auto;
   background: #fff;
-  border-radius: 14px;
+  border-radius: 8px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.18);
   overflow: hidden;
   z-index: 1;
@@ -154,48 +153,6 @@ input[type="text"]:focus, input[type="password"]:focus {
 .terms a {
   color: #d32f2f;
   text-decoration: underline;
-}
-
-.continue-section {
-  margin-top: 1.5rem;
-  text-align: center;
-  font-size: 1rem;
-  color: #444;
-}
-
-.continue-buttons {
-  margin-top: 0.5rem;
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-}
-
-.continue-btn {
-  padding: 0.5rem 1.2rem;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s;
-}
-
-.continue-btn.admin {
-  background: #1976d2;
-  color: #fff;
-}
-
-.continue-btn.admin:hover {
-  background: #125ea2;
-}
-
-.continue-btn.student {
-  background: #d32f2f;
-  color: #fff;
-}
-
-.continue-btn.student:hover {
-  background: #b71c1c;
 }
 
 @media (max-width: 900px) {
