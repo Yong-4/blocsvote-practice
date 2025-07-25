@@ -1,17 +1,32 @@
 function login() {
-  const schoolId = document.getElementById('schoolid').value;
-  const pass = document.getElementById('password').value;
+  const schoolId = document.getElementById('schoolid').value.trim();
+  const pass = document.getElementById('password').value.trim();
 
-  if (schoolId == "2022-32079" && pass == "batch2025") {
+  fetch('http://localhost:3000/api/votes/login', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      student_id: schoolId,
+      password: pass
+    })
+  })
+  .then(res => res.json())
+  .then(data => {
+    if (data.user) {
+      // Save user ID to localStorage for later use
+      localStorage.setItem('userId', data.user.id);
 
-    window.location.href = "../Voter/voter.html"; 
-  }
-  else if (schoolId == "2025-2026" && pass == "admin2025") {
-    window.location.href = "../Admin/admin.html"; 
-  } 
-  else{
-    alert('Invalid School ID or Password. Please try again.');
-  }
+      // Redirect based on role
+      if (data.user.role === 'admin') {
+        window.location.href = "../Admin/admin.html";
+      } else {
+        window.location.href = "../Voter/voter.html";
+      }
+    } else {
+      alert(data.error || 'Login failed.');
+    }
+  })
+  .catch(() => alert('Server error. Please try again later.'));
 }
 
 function goToVoter() {
